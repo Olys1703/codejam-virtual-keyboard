@@ -1,2 +1,2 @@
-import './src/style.scss';
-import './src/canvas.js'
+import './style.scss';
+import './keyboard';
