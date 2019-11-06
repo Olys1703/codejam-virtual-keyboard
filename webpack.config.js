@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: './src/app.js',
   output: {
-    path: path.resolve(__dirname,),
+    path: path.resolve(__dirname,'dist'),
     filename: 'bundle.js'
   },
   mode: 'development',
@@ -15,12 +15,10 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // all options are optional
       template: './src/style.css',
-      filename: 'main.css',
+      filename: 'style.css',
       chunkFilename: '[id].css',
-      ignoreOrder: false, // Enable to remove warnings about conflicting order
+      ignoreOrder: false, 
     }),
   ],
   module: {
@@ -58,11 +56,23 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' 
         ],
       },
-    ],
+      /*{
+        test: /\.json$/,
+        use: [
+          {
+            loader: 'json-loader'
+          }
+        ]
+      }*/
+    ]
   },
+  
+  /*node: {
+    fs: "empty"
+ },*/
   devtool: 'inline-source-map',
     devServer: {
-      contentBase: path.join(__dirname),
+      contentBase: path.join(__dirname,'dist'),
       compress: true,
       port: 3000
     }

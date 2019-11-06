@@ -2,142 +2,97 @@
     margin: 0;
     padding: 0;
 }
-body{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-.nav{
-    display: flex;
-    //align-items: flex-end;
-    //flex-direction: row;
-    box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.24);
-}
-h1 {
-    flex-grow: 3;
-    align-self: center;
-    margin-left: 5%;
-}
-#options {
-    background-color: white;
-    border: none;
-    margin-right: 12px;
-    //align-self: flex-end;
-}
-#menu {
-    background-color: white;
-    border: none;
-}
-.main {
-    display: flex;
-    margin: auto;
-    margin-top: 100px;
-    width: 100%;
-    flex-wrap: wrap;
-    &-toolswrapper {
-        display: inline-block;
-        height: 228px;
-        width: 246px;
-        box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.24);
-    }
-    &-tools {
-        list-style-type: none;
-        &--tool {
-            display: flex;
-            line-height: 56px;
-            align-items: center;
 
-            img{
-                margin: 0 20px;
-                height: 24px;
-            }
-        }
-        &--tool:nth-child(2) {
-            border-bottom: rgba(0, 0, 0, 0.24) solid 4px;
-        }
-    }
-    &-canvaswrapper {
-        //display: inline-block;
-        height: 512px;
-        width: 512px;
-        margin-left: auto;
-        //margin: auto;
-        //position: relative;
-        //top: 300px;
-        //display: flex;
-        //vertical-align: middle;
-        //align-items: center;
-        //height: 500px;
-        //width: 500px;
-        background-color: gray;
-    }
-    &-change {
-        height: 150px;
-        width: 200px;
-        box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.24);
-        margin-left: auto;
-        &--list {
-            list-style-type: none;
-            line-height: 50px;
-            text-align: center;
-        }
-    }
-    &-palletwrapper {
-        //display: inline-block;
-        margin-top: 50px;
+.keyboard {
+    background-color: rgba(102, 224, 187, 0.61);
+    border-radius: 5%;
+    width: 700px;
+    margin: auto;
+    color: white;
+    &-row {
+        justify-content: center;
+        align-items: center;
         display: flex;
-        height: 228px;
-        width: 246px;
-        box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.24);
+        height: 50px;
     }
-    &-pallet{
-        list-style-type: none;
-        line-height: 56px;
-        
-        &--list {
-            width: 246px;
-            display: flex;
-            align-items: center;
+    &-key{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4px;
+        text-align: center;
+        background-color: rgba(101, 101, 134, 0.801);
+        height: 40px;
+        width: 40px;
+        border-radius: 25%;
+        transition: width 0.2s, height 0.2s, background-color 0.2s, border-radius 0.2s;
+        animation-direction: reverse;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        &:hover {
+            cursor: pointer;
         }
-        &--list:nth-child(2) {
-            border-bottom: rgba(0, 0, 0, 0.24) solid 4px;
+        &--upcase {
+            width: 100%;
+        }
+        &--downcase {
+            width: 100%;
         }
     }
-        
-    
 }
 
-#canvas {
-    display: inline-block;
-    text-align: center;
-    //height: 512px;
-    //width: 512px;
+#textarea {
+    display: flex;
+    margin: 50px auto;
+    width: 700px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-style: italic;
 }
-.selected:hover{
-    background-color: rgba(0, 0, 0, 0.24);
-    cursor: pointer;
-}
-#rss {
-    display: none;
-}
-.circle {
-    height: 24px;
-    width: 24px;
-    border: 1px solid black;
+
+.active {
+    font-size: 0;
+    height: 25px;
+    width: 25px;
+    background-color: pink;
     border-radius: 50%;
-    margin: 0 20px;
-    //display: flex;
+}
 
+#Space {
+    width: 294px;
 }
-#currentcolor {
-    background-color: rgb(168, 168, 168);
+
+#Tab {
+    width: 60px;
 }
-#prevcolor {
-    background-color: rgb(156, 223, 156);
+
+#Backslash {
+    width: 60px;
 }
-#firstcolor {
-    background-color: rgb(214, 35, 35);
+
+#Backquote {
+    width: 40px;
 }
-#secondcolor {
-    background-color: rgb(60, 60, 206);
+
+#Backspace {
+    width: 80px;
+}
+
+#CapsLock {
+    width: 75px;
+}
+
+#Enter {
+    width: 105px;
+}
+
+#ShiftLeft {
+    width: 90px;
+}
+
+#ShiftRight {
+    width: 110px;
+}
+
+#ControlRight {
+    width: 54px;
 }
